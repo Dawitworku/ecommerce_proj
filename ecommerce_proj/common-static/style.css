@@ -349,7 +349,7 @@ body {
 .myH2 {
 	text-align:center;
     font-size: 4rem;
-    font-weight: bold;
+    font-weight: 400;   /* Was bold */
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -364,7 +364,6 @@ body {
 		padding:2%;
 	}
 } */
-
 .card{
     display: inline-block;
     margin-left: 2%;
@@ -382,4 +381,57 @@ body {
 }
 a.catag-links:hover{
     color: #00E676;
+}
+.img-fit{
+    object-fit: cover;
+}
+
+.featured-text{
+    text-align:center;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#specials-bg{
+    width: 100%;
+    /* height: 600px; */
+    background-color: #e8e4e4;
+    padding: 4rem;
+    box-size: border-box;
+    margin-bottom: 3rem;
+}
+.img-fluid {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+#spec-head {
+    text-align: center;
+    font-size: 14px !important;
+    /* font-weight: 400; */
+    letter-spacing: 3px;
+}
+#spec-tag{
+    text-align: center;
+    font-size: 30px !important;
+    margin-bottom: 25px;
+}
+
+#spec-shopnow{
+    margin-left: 41%;
+    padding: 10px 40px;
+    font-size: 18px !important;
+
+    font-weight: 700;
+    padding: 10px 40px;
+    letter-spacing: 0;
+    color: black;
+    background: white;
+    margin-bottom: 25px;
+    border: none;
+    text-transform: none;
 }
