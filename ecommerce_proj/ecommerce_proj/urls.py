@@ -13,11 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# from django.contrib import admin
+from django.contrib import admin
 from django.urls import path, include
+# IMPORTED THIS 2 DJANGO FILES 
+from django.conf.urls.static import static
+from django.conf import settings # imported this because I added the static files in settings. Now i can use that static setting to cerate a static path
+
+
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+
     path('', include('ecomm_app.urls')),
     path('login/', include('Login_Reg_app.urls')),
+    path('admin/', admin.site.urls),
 ]
+
+#Added this to be able to use image field.
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

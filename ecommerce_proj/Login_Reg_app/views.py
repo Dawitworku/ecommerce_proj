@@ -32,7 +32,7 @@ def register(request):
             request.session['user_id'] = this_user.id
             messages.success(request, "Successfully Created an Account. Please Login Using Your Email")
             return redirect('/')
-    return redirect('/')
+    return redirect('/login')
 
 
 def email_check(request):
@@ -63,11 +63,11 @@ def login(request):
             if bcrypt.checkpw(request.POST['password'].encode(), this_user.password.encode()):
                 # storing the user identity in our sessions here
                 request.session['user_id'] = this_user.id
-                return redirect('/welcome')
+                return redirect('/')
 
         messages.error(request, "Email or Password not found")
 
-    return redirect('/')
+    return redirect('/login')
 
 
 def welcome_page(request):

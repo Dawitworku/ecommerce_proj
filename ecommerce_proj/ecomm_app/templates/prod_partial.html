@@ -1,0 +1,49 @@
+
+<div class="container">
+
+    <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        {% for item in filtered_prod reversed%}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="{{ MEDIA_URL }}{{ item.images.all.0.image}}"
+                            class="card-img-top" alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <h5>
+                            <strong>
+                                <a href="/home/{{item.get_shoe_type_display}}/{{item.id}}" class="dark-grey-text">{{item.name}}
+                                    <span class="badge badge-pill danger-color">{{item.get_label_display}}</span>
+                                </a>
+                            </strong>
+                        </h5>
+
+                        <h4 class="font-weight-bold blue-text">
+                            <strong>${{item.price}}</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+        {% endfor %}
+
+
+    </div>
+</div>

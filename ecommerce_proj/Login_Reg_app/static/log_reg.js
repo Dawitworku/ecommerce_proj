@@ -9,7 +9,7 @@ $('#email-ajax').keyup(function (event) {
         $('#email_ajax_error').text('');
     } else {
         $.ajax({
-            url: '/email_check',
+            url: '/login/email_check',
             method: 'POST',
             data: {
                 email: event.target.value, //instead of passing the whole form, we can pass just the email and generate a token on the spot

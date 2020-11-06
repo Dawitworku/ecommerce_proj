@@ -1,0 +1,42 @@
+
+.bg-cat-navbar{
+    background-color: black;
+    font-size: 17px;
+}
+
+.view{
+    height: 170px;
+}
+
+.card-body{
+    flex: 1 1 auto;
+    min-height: 1px;
+    /* padding: 1.25rem; */
+    height: 65px;
+    box-sizing: border-box;
+}
+
+#accordionEx {
+    display: grid;
+    text-align: left;
+}
+
+.card-body{
+    flex: 1 1 auto;
+    min-height: 1px;
+    /* padding: 1.25rem; */
+    height: 90px;
+    box-sizing: border-box;
+}
+
+.carousel {
+    position: relative;
+    display: inline-block;
+    width: 565px;
+    box-sizing: border-box;
+}
+
+.d-block {
+    height: 290px;
+    object-fit: cover;
+}
